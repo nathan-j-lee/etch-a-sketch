@@ -1,11 +1,10 @@
 document.getElementById('div-grid').style.display = "flex";
-boxes = 24;
+boxes = 75;
 for (i = 0; i < boxes; i++) {
     // row of divs
     var rowDiv = document.createElement('div');
     console.log("Row created");
     rowDiv.className = "row-div";
-    rowDiv.style.border = "solid 1px lightgray";
     document.getElementById('div-grid').appendChild(rowDiv);
 
     // column of divs
@@ -14,14 +13,14 @@ for (i = 0; i < boxes; i++) {
         var colDiv = document.createElement('div');
         console.log("Col created");
         colDiv.className = "col-div";
-        colDiv.style.border = "solid 1px lightgray";
+        colDiv.style.border = "solid 1px black";
         rowDiv.appendChild(colDiv);
     }
 
     // Make div red on hover
     document.querySelectorAll('.col-div').forEach(div => {
-        div.addEventListener('mouseover', () => {
-            div.style.backgroundColor = "red";
+        div.addEventListener('mouseover', (e) => {
+            div.style.backgroundColor = "rgb(196,211,0)";
         });
     });
 
