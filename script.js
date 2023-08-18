@@ -1,5 +1,5 @@
 document.getElementById('div-grid').style.display = "flex";
-boxes = 75;
+boxes = 50;
 for (i = 0; i < boxes; i++) {
     // row of divs
     var rowDiv = document.createElement('div');
@@ -17,7 +17,7 @@ for (i = 0; i < boxes; i++) {
         rowDiv.appendChild(colDiv);
     }
 
-    // Make div red on hover
+    // Make div some color on hover
     document.querySelectorAll('.col-div').forEach(div => {
         div.addEventListener('mouseover', (e) => {
             div.style.backgroundColor = "rgb(196,211,0)";
