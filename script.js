@@ -1,7 +1,6 @@
-function initialize() {
+function initialize(size) {
     document.getElementById('div-grid').style.display = "flex";
-    boxes = 50;
-    for (i = 0; i < boxes; i++) {
+    for (i = 0; i < size; i++) {
         // row of divs
         var rowDiv = document.createElement('div');
         console.log("Row created");
@@ -10,7 +9,7 @@ function initialize() {
 
         // column of divs
         rowDiv.style.flexDirection = "column";
-        for (j = 0; j < boxes; j++) {
+        for (j = 0; j < size; j++) {
             var colDiv = document.createElement('div');
             console.log("Col created");
             colDiv.className = "col-div";
@@ -28,4 +27,13 @@ function initialize() {
     }
 }
 
-initialize();
+initialize(50);
+
+var reset = document.querySelector('#reset');
+
+reset.addEventListener('click', () => {
+    // Make div some color on hover
+    document.querySelectorAll('.col-div').forEach(div => {
+        div.style.backgroundColor = "white";
+    });;
+});
