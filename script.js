@@ -33,7 +33,8 @@ var reset = document.querySelector('#reset');
 
 reset.addEventListener('click', () => {
     // Make div some color on hover
-    document.querySelectorAll('.col-div').forEach(div => {
-        div.style.backgroundColor = "white";
-    });;
+    document.querySelectorAll('.row-div').forEach(div => {
+        div.remove();
+    });
+    initialize(50);
 });
