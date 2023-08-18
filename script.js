@@ -32,9 +32,16 @@ initialize(50);
 var reset = document.querySelector('#reset');
 
 reset.addEventListener('click', () => {
-    // Make div some color on hover
-    document.querySelectorAll('.row-div').forEach(div => {
-        div.remove();
-    });
-    initialize(50);
+    var size = document.getElementById('grid-size').value;
+    console.log(size);
+    if (size <= 100 && size >= 1) {
+        // Make div some color on hover
+        document.querySelectorAll('.row-div').forEach(div => {
+            div.remove();
+        });
+        initialize(size);
+    }
+    else {
+        alert("Invalid number. Please input a number between 1-100");
+    }
 });
